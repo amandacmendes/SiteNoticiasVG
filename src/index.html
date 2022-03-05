@@ -24,16 +24,29 @@
 			text-transform: uppercase;
 			font-weight: bold;
 		}
+
 		.txt-destaque-car {
 			color: red;
 			text-transform: uppercase;
 			font-weight: bold;
 			margin-top: 3px;
 		}
-		
-		.txt-noticia-car-sm{
+
+		.txt-noticia-car-sm {
 			font-weight: lighter;
 		}
+
+		.txt-secao-titulo {
+			text-transform: uppercase;
+			font-weight: bold;
+			color: black;
+		}
+
+		.txt-podcast {
+			color: red;
+			font-weight: bold;
+		}
+
 		.aside-imgs {
 			width: 120px;
 			height: 100px;
@@ -70,27 +83,39 @@
 	<!-- Header da página -->
 	<header class="container py-3">
 		<div id="current_date" class="d-sm-flex justify-content-center">
+
 			<script>
-				date = new Date();
-				year = date.getFullYear();
-				month = date.getMonth() + 1;
-				day = date.getDate();
-				const ptBRFormato = new Intl.DateTimeFormat('pt-BR', {
-					year: 'numeric',
-					month: 'long',
-					day: 'numeric',
-				});
-				date = ptBRFormato.format(date);
-				document.getElementById("current_date").innerHTML = day + " de " + month + " de " + year;
+				var hoje = new Date();
+				var hojeFormat = hoje.getDate() + '/' + (hoje.getMonth() + 1) + '/' + (hoje.getFullYear());
+
+				var meses = [
+					"Janeiro",
+					"Fevereiro",
+					"Março",
+					"Abril",
+					"Maio",
+					"Junho",
+					"Julho",
+					"Agosto",
+					"Setembro",
+					"Outubro",
+					"Novembro",
+					"Dezembro"
+				];
+				var dias = ["domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"]
+
+				document.getElementById("current_date").innerHTML = hoje.getDate() + ' de ' + meses[hoje.getMonth()] + ' de ' + hoje.getFullYear();
+
 			</script>
+
 		</div>
-		<img src="img\logo.png">
+		<a href="#"><img src="img\logo.png"></a>
 	</header>
 
 	<!-- Barra horizontal menu -->
 	<div class="d-lg-flex p-2 menu-style justify-content-center">
 		<div class="container d-lg-flex ">
-			<ul class="list-group list-group-horizontal">
+			<ul class="list-group list-group-horizontal navbar">
 				<li class="list-inline-item"><a class="nav-link text-white" href="#">Home</a></li>
 				<li class="list-inline-item"><a class="nav-link text-white" href="#">Expediente</a></li>
 				<li class="list-inline-item"><a class="nav-link text-white" href="#">Jurídico</a></li>
@@ -237,17 +262,14 @@
 				</div>
 
 				<!-- Policia -->
-
-				<div class="row">
-					<div class="d-flex">
-						<p>POLICIA</p>
-						<p class="txt-destaque">LEIA MAIS</p>
-					</div>
+				<div class="row flex-row d-flex  px-2 pt-2">
+					<p class="mr-auto txt-secao-titulo">POLICIA</p>
+					<p class="txt-destaque">LEIA MAIS</p>
 				</div>
 
 				<div class="row">
-					<div class="col-xs-12 col-md-6  pos-r">
-						
+					<div class="col-xs-12 col-md-6 pos-r">
+
 						<!-- Carrossel-->
 						<div style="width:100%; max-height: fit-content;">
 							<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -258,25 +280,26 @@
 								</ol>
 								<div class="carousel-inner" role="listbox" style="max-height:470px !important;">
 									<div class="carousel-item active">
-										<img class="d-block w-100" src="img/stock/happy-people.jpg" alt="First slide">										
+										<img class="d-block w-100" src="img/stock/happy-people.jpg" alt="First slide">
 										<div class="bg-white">
 											<h5 class="txt-destaque-car">SAUDE MENTAL</h5>
 											<h4 class="txt-noticia-car-sm">Descubra os beneficios da terapia</h4>
-										</div>										
+										</div>
 									</div>
 									<div class="carousel-item">
 										<img class="d-block w-100" src="img/stock/old-man.jpg" alt="Second slide">
 										<div class="bg-white">
 											<h5 class="txt-destaque-car">ABSURDO</h5>
 											<h4 class="txt-noticia-car-sm">Idoso é preso por maltratar cães</h4>
-										</div>		
+										</div>
 									</div>
 									<div class="carousel-item">
 										<img class="d-block w-100" src="img/stock/stocks.jpg" alt="Third slide">
 										<div class="bg-white">
 											<h5 class="txt-destaque-car">CRISE FINANCEIRA</h5>
-											<h4 class="txt-noticia-car-sm">Preço da cesta básica é o mais alto desde que se foi criada a cesta básica </h4>
-										</div>		
+											<h4 class="txt-noticia-car-sm">Preço da cesta básica é o mais alto desde que
+												se foi criada a cesta básica </h4>
+										</div>
 									</div>
 								</div>
 								<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
@@ -299,7 +322,7 @@
 						<div class="text-dark p-2 d-inline-flex align-items-md-center">
 							<img src="img/stock/stock-1.jpg" class="img-thumbnail py-2 mr-2 noticias-leiamais-img">
 							<div>
-								<h6 class="txt-destaque "> CRISE</h6>
+								<h6 class="txt-destaque "> CRIME</h6>
 								<p style="font-size:93%;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
 							</div>
 							<hr>
@@ -307,7 +330,7 @@
 						<div class="text-dark p-2 d-inline-flex align-items-md-center">
 							<img src="img/stock/stock-2.jpg" class="img-thumbnail py-2 mr-2 noticias-leiamais-img">
 							<div>
-								<h6 class="txt-destaque "> CRISE</h6>
+								<h6 class="txt-destaque "> LAVAGEM DE DINHEIRO</h6>
 								<p style="font-size:93%;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit sed
 									do eiusmod tempor incididunt ut labore. </p>
 							</div>
@@ -316,7 +339,7 @@
 						<div class="text-dark p-2 d-inline-flex align-items-md-center">
 							<img src="img/stock/stock-3.jpg" class="img-thumbnail py-2 mr-2 noticias-leiamais-img">
 							<div>
-								<h6 class="txt-destaque "> CRISE</h6>
+								<h6 class="txt-destaque "> FUGA</h6>
 								<p style="font-size:93%;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
 							</div>
 							<hr>
@@ -326,22 +349,52 @@
 				<hr>
 
 				<!-- Noticias patrocinadas-->
+				<div class="row flex-row d-flex  px-2 pt-2">
+					<p class="mr-auto txt-secao-titulo">noticias patrocinadas</p>
+					<p class="txt-destaque">LEIA MAIS</p>
+				</div>
+
 				<div class="row">
-					<div class="d-flex">
-						<p>NOTICIAS PATROCINADAS</p>
-						<p class="txt-destaque">LEIA MAIS</p>
+					<!-- colocar aqui aquelas noticias pequenas-->
+					<div class="bg-light text-dark p-2 col-md-4 col-xs-4">
+
+						<img src="img/stock/stock-1.jpg" class="img-thumbnail noticias-img py-2">
+						<h6 class="txt-destaque mt-2"> NOVIDADE</h6>
+						<p style="font-size:93%;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+							do eiusmod tempor
+							incididunt ut
+							labore et dolore magna aliqua. </p>
+					</div>
+					<div class="bg-light text-dark p-2 col-md-4 col-xs-4">
+
+						<img src="img/stock/stock-2.jpg" class="img-thumbnail noticias-img py-2">
+						<h6 class="txt-destaque mt-2"> OPORTUNIDADE</h6>
+						<p style="font-size:93%;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+							do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet,
+							consectetur adipiscing elit, sed
+							do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+					</div>
+					<div class="bg-light text-dark p-2 col-md-4 col-xs-4">
+
+						<img src="img/stock/stock-3.jpg" class="img-thumbnail noticias-img py-2">
+						<h6 class="txt-destaque mt-2"> OFERTA</h6>
+						<p style="font-size:93%;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+							do eiusmod tempor
+							incididunt ut
+							labore et dolore magna aliqua. </p>
 					</div>
 				</div>
+				<hr>
 
 			</div> <!-- fim col-md-9-->
 
 			<!-- Coluna lateral-->
 			<aside class="col-md-3">
-				<div class="txt-destaque">
-					NO ALVO
+				<div class="txt-destaque px-1">
+					<h5>NO ALVO</h5>
 				</div>
 				<br />
-
+				<!--Notícias "No alvo"-->
 				<div class="d-flex flex-row">
 					<div class="aside-imgs align-self-sm-start col-md-5 pl-0">
 						<img src="img/stock/happy-people.jpg" class=" img-thumbnail rounded float-left">
@@ -370,9 +423,84 @@
 					</div>
 				</div>
 				<hr>
+				<!--Botao leia mais-->
 				<div class="d-flex flex-row-reverse">
 					<button type="button" class="btn btn-link btn-outline-primary">LEIA MAIS</button>
 				</div>
+				<hr>
+
+				<!--Youtube video-->
+
+				<!--Podcast-->
+				<div class="txt-destaque text-white px-1" style="background-color: red;">
+					<h5>Podcast ouça no VGN</h5>
+				</div>
+
+				<div class="d-flex flex-row mt-3 ">
+					<div class="px-1 mr-auto">
+						<p class="txt-podcast text-dark">#amar</p>
+						<p class="txt-podcast">Vida é amor </p>
+					</div>
+					<div class="aside-imgs ml-auto col-md-5 pl-0">
+						<img src="img/stock/podcast.jpg" class=" img-thumbnail rounded float-left">
+					</div>
+				</div>
+
+				<div class="d-flex flex-row ">
+					<div class="px-1 mr-auto">
+						<p class="txt-podcast text-dark">#Conhecimento</p>
+						<p class="txt-podcast">ELEVE-SE </p>
+					</div>
+					<div class="aside-imgs ml-auto col-md-5 pl-0">
+						<img src="img/stock/podcast.jpg" class=" img-thumbnail rounded float-left">
+					</div>
+				</div>
+				<div class="d-flex flex-row ">
+					<div class="px-1 mr-auto">
+						<p class="txt-podcast text-dark">#Reflexão</p>
+						<p class="txt-podcast">Disposição e mudanças </p>
+					</div>
+					<div class="aside-imgs ml-auto col-md-5 pl-0">
+						<img src="img/stock/podcast.jpg" class=" img-thumbnail rounded float-left">
+					</div>
+				</div>
+				<hr>
+
+				<!--Revista VGN-->
+				<div class="mb-4">
+					<h4 class="txt-destaque ">Revista VGN</h4>
+				</div>
+				<div class=" d-flex ">
+					<div class="d-flex align-items-md-center flex-md-column">
+						<img src="img/stock/vgn-154anos.jpg" class="justify-content-center float mb-2">
+						<h5 class="text-center">VG Noticias - 154 Anos de Várzea Grande</h5>
+						<hr>
+						<img src="img/stock/vgn-153anos.jpg" class="justify-content-center float mb-2">
+						<h5 class="text-center">VG Noticias - 153 Anos de Várzea Grande</h5>
+					</div>
+				</div>
+				<hr>
+
+				<!-- Mais lidas -->
+				<div id="mais-lidas">
+					<div class="mb-4">
+						<h4 class="txt-destaque ">Mais lidas</h4>
+					</div>
+					<div class="d-flex flex-md-column">
+						<p class="my-2">1. Motorista perde controle de carro, atropela e mata frentista em posto de
+							combustível de VG</p>
+						<p class="my-2">2. Festa clandestina em frente policlínica é fechada em Várzea Grande</p>
+						<p class="my-2">3. Casal morre ao colidir veículo na lateral de caminhão quebrado na BR 364 em
+							Cuiabá</p>
+						<p class="my-2">4. Cortejada pelo sogro, Janaina pode deixar MDB e se filiar ao PL</p>
+						<p class="my-2">5. Idoso é preso por maltratar cães; quatro animais são encontrados amarrados e
+							um morto</p>
+					</div>
+
+				</div>
+
+				<!--Enquete-->
+
 			</aside>
 
 			<!-- Footer da página-->
@@ -384,7 +512,7 @@
 						<p class="txt-footer">(65) 3029-5760 <br /> (65) 99957-5760 </p>
 					</div>
 					<div>
-						<img src="img/logo.png">
+						<a href="#"><img src="img\logo.png"></a>
 					</div>
 				</div>
 			</footer>
