@@ -19,6 +19,10 @@
 		crossorigin="anonymous"></script>
 
 	<style>
+		.txt-data{
+			text-transform: uppercase;
+			color:grey;
+		}
 		.txt-destaque {
 			color: red;
 			text-transform: uppercase;
@@ -81,13 +85,11 @@
 <body>
 
 	<!-- Header da página -->
-	<header class="container py-3">
-		<div id="current_date" class="d-sm-flex justify-content-center">
-
+	<header class="container py-1">
+		<div id="current_date" class="d-sm-flex justify-content-center txt-data">
 			<script>
 				var hoje = new Date();
 				var hojeFormat = hoje.getDate() + '/' + (hoje.getMonth() + 1) + '/' + (hoje.getFullYear());
-
 				var meses = [
 					"Janeiro",
 					"Fevereiro",
@@ -103,13 +105,10 @@
 					"Dezembro"
 				];
 				var dias = ["domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"]
-
 				document.getElementById("current_date").innerHTML = hoje.getDate() + ' de ' + meses[hoje.getMonth()] + ' de ' + hoje.getFullYear();
-
 			</script>
-
 		</div>
-		<a href="#"><img src="img\logo.png"></a>
+		<a href="#"><img src="img\logo.png" class="my-2"></a>
 	</header>
 
 	<!-- Barra horizontal menu -->
