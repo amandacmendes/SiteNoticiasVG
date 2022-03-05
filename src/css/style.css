@@ -14,10 +14,12 @@
     text-transform: uppercase;
     font-weight: bold;
     margin-top: 3px;
+    margin-left: 2px;
 }
 
 .txt-noticia-car-sm {
     font-weight: lighter;
+    margin-left: 2px;
 }
 
 .txt-secao-titulo {
@@ -63,4 +65,10 @@
     height: 100px;
     width: 100px;
     max-height: fit-content;
+}
+
+.fundo-claro-noticias{
+    background-color: #F0F0F0;
+    padding-left: 20px;
+    padding-right: 20px;
 }
