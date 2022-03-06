@@ -16,6 +16,11 @@
     margin-top: 3px;
     margin-left: 2px;
 }
+#txt-variedades {
+    color: #004C94;
+    text-transform: uppercase;
+    font-weight: bold;
+}
 
 .txt-noticia-car-sm {
     font-weight: 400;
