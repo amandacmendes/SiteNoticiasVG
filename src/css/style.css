@@ -25,7 +25,10 @@
 .txt-secao-titulo {
     text-transform: uppercase;
     font-weight: bold;
-    color: black;
+    color: WHITE;
+    background-color: red;
+    padding-left: 8px;    
+    padding-right: 8px;
 }
 
 .txt-podcast {
