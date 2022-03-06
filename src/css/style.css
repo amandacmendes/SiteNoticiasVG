@@ -21,6 +21,9 @@
     text-transform: uppercase;
     font-weight: bold;
 }
+#txt-variedades-noticia{
+    font-size: 120%;
+}
 
 .txt-noticia-car-sm {
     font-weight: 400;
@@ -54,6 +57,7 @@
 .noticias-img {
     max-height: fit-content;
 }
+
 
 .txt-footer {
     color: black;
