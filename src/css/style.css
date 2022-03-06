@@ -18,7 +18,7 @@
 }
 
 .txt-noticia-car-sm {
-    font-weight: lighter;
+    font-weight: 400;
     margin-left: 2px;
 }
 
@@ -65,6 +65,13 @@
     height: 100px;
     width: 100px;
     max-height: fit-content;
+}
+#entrevista-titulos{
+    font-weight: 400;
+}
+#policia-titulos{
+    font-weight: 500;
+    font-size: 93%;
 }
 
 .fundo-claro-noticias{
